@@ -12,10 +12,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Android14">
         <activity
-            android:name=".practicas.explicitintent.SecondActivity"
-            android:exported="false" />
-        <activity
-            android:name=".practicas.explicitintent.FirstActivity"
+            android:name=".practicas.graphiccomponents.FrameLayoutActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -23,6 +20,12 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".practicas.explicitintent.SecondActivity"
+            android:exported="false" />
+        <activity
+            android:name=".practicas.explicitintent.FirstActivity"
+            android:exported="true" />
         <activity
             android:name=".practicas.implicitintent.ImplicitIntentActivity"
             android:exported="true" />
