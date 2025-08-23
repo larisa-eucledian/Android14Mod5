@@ -42,8 +42,14 @@ class SecondActivity : AppCompatActivity() {
 
         //Second
         val name = intent.getStringExtra("EXTRA_NAME_KEY")
+        val age = intent.getIntExtra("EXTRA_AGE_KEY",0)
+
         name?.let{
             infoReceived += ", $it"
+        }
+
+        age.let {
+            infoReceived += it
         }
 
         tvInfo.text = infoReceived
