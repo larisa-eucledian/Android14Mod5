@@ -46,8 +46,6 @@ class SecondActivity : AppCompatActivity() {
             infoReceived += ", $it"
         }
 
-        infoReceived += ", $it"
-
         tvInfo.text = infoReceived
 
     }
