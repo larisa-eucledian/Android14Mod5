@@ -21,39 +21,45 @@ class LifeCycleToastActivity : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
-        Toast.makeText(this, "onCreate", Toast.LENGTH_SHORT).show()
+        Toast.makeText(this, " LifeCycleToastActivity: onCreate", Toast.LENGTH_SHORT).show()
 
     val btnSendUrl = findViewById<Button>(R.id.btnSendUrl)
+    val btnOpenFirstActivity = findViewById<Button>(R.id.btnOpenFirstActivity)
 
         btnSendUrl.setOnClickListener {
             val urlIntent = Intent(Intent.ACTION_VIEW, Uri.parse("https://google.com"))
-            startActivity(Intent.createChooser(urlIntent,"Open URL with:"))
+            startActivity(Intent.createChooser(urlIntent, "Open using:"))
+        }
+
+        btnOpenFirstActivity.setOnClickListener {
+            val firstActivityIntent = Intent(this, FirstPracticeActivity::class.java)
+            startActivity(firstActivityIntent)
         }
 
     }
 
     override fun onStart() {
         super.onStart()
-        Toast.makeText(this, "onStart", Toast.LENGTH_SHORT).show()
+        Toast.makeText(this, "LifeCycleToastActivity: onStart", Toast.LENGTH_SHORT).show()
     }
 
     override fun onResume() {
         super.onResume()
-        Toast.makeText(this, "onResume", Toast.LENGTH_SHORT).show()
+        Toast.makeText(this, "LifeCycleToastActivity: onResume", Toast.LENGTH_SHORT).show()
     }
 
     override fun onPause() {
         super.onPause()
-        Toast.makeText(this, "onPause", Toast.LENGTH_SHORT).show()
+        Toast.makeText(this, "LifeCycleToastActivity: onPause", Toast.LENGTH_SHORT).show()
     }
 
     override fun onStop() {
         super.onStop()
-        Toast.makeText(this, "onStop", Toast.LENGTH_SHORT).show()
+        Toast.makeText(this, "LifeCycleToastActivity: onStop", Toast.LENGTH_SHORT).show()
     }
 
     override fun onDestroy() {
         super.onDestroy()
-        Toast.makeText(this, "onDestroy", Toast.LENGTH_SHORT).show()
+        Toast.makeText(this, "LifeCycleToastActivity: onDestroy", Toast.LENGTH_SHORT).show()
     }
 }

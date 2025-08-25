@@ -45,7 +45,6 @@ class SecondActivity : AppCompatActivity() {
         //Second
         val name = intent.getStringExtra("EXTRA_NAME_KEY")
         val age = intent.getIntExtra("EXTRA_AGE_KEY", 0)
-        val price = intent.getDoubleExtra("EXTRA_PRICE_KEY", 0.00)
 
         /*   name?.let{
                infoReceived += ", $it"
