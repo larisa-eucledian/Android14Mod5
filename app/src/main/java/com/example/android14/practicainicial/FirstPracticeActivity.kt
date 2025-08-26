@@ -35,11 +35,12 @@ class FirstPracticeActivity : AppCompatActivity() {
             ActivityResultContracts.StartActivityForResult()
         ) {result->
             if (result.resultCode == Activity.RESULT_OK){
-                val bundle = result.data?.getBundleExtra("EXTRA_BUNDLE")
-                val personResult = bundle?.getSerializable("EXTRA_PERSON_RESULT", Person::class.java)
+                val personResult = result.data
+                    ?.getBundleExtra("EXTRA_BUNDLE")
+                    ?.getSerializable("EXTRA_PERSON_RESULT", Person::class.java)
 
-                personResult?.let{
-                    txtResult.text = "Confimed:\n${it.name} ${it.lastName} ${it.email}"
+                personResult?.let {
+                    txtResult.text = "Confirmed:\n${it.name} ${it.lastName} ${it.email}"
                 }
 
             }
