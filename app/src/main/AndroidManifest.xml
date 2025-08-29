@@ -12,6 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Android14">
         <activity
+            android:name=".practicas.graphiccomponents.ConstraintLayoutActivity"
+            android:exported="false" />
+        <activity
             android:name=".practicas.graphiccomponents.RelativeLayoutActivity"
             android:exported="false" />
         <activity
