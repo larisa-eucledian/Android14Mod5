@@ -12,8 +12,8 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Android14">
         <activity
-            android:name=".practicas.graphiccomponents.list.RecyclerViewActivity"
-            android:exported="true">
+            android:name=".practicas.compose.ComposeWelcomeActivity"
+            android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -21,8 +21,14 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".practicas.graphiccomponents.BasicComponentsActivity"
+            android:name=".practicas.graphiccomponents.list.SecondRecyclerActivity"
+            android:exported="false" />
+        <activity
+            android:name=".practicas.graphiccomponents.list.RecyclerViewActivity"
             android:exported="true"/>
+        <activity
+            android:name=".practicas.graphiccomponents.BasicComponentsActivity"
+            android:exported="true" />
         <activity
             android:name=".practicas.graphiccomponents.ConstraintLayoutActivity"
             android:exported="false" />
