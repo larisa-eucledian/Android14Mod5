@@ -1,5 +1,6 @@
 package com.example.android14.practicas.graphiccomponents.list
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
@@ -38,8 +39,13 @@ class RecyclerViewActivity : AppCompatActivity() {
         AnimalEntity("Xolo","Gris",""),
         AnimalEntity("Oso","Negro",""))
 
+
         val adapter = AnimalAdapter(data)
         adapter.onRowSelected ={
+            val intent = Intent(this, SecondRecyclerActivity::class.java)
+            intent.putExtra("extra_animal", it)
+            startActivity(intent)
+
             //TODO Crear Intent y Mandar a llamar segunda activity y pasar la información de animalEntity (it)
             Toast.makeText(this,"Item selected: ${it.name}", Toast.LENGTH_SHORT).show()
         }
