@@ -50,7 +50,6 @@ class RecyclerViewActivity : AppCompatActivity() {
             intent.putExtra("extra_animal", it)
             startActivity(intent)
 
-            //TODO Crear Intent y Mandar a llamar segunda activity y pasar la información de animalEntity (it)
             Toast.makeText(this,"Item selected: ${it.name}", Toast.LENGTH_SHORT).show()
         }
 
