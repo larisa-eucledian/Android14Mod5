@@ -16,7 +16,15 @@
         android:id="@+id/btnNext"
         android:layout_gravity="bottom|center_horizontal"
         android:layout_marginBottom="30dp"
-        android:text="Mostrar fragment B"
+        android:text="REGISTER"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"/>
+
+    <Button
+        android:id="@+id/btnOpenC"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="30dp"
+        android:text="FORGOT PASSWORD"
         android:layout_width="200dp"
         android:layout_height="wrap_content"/>
 

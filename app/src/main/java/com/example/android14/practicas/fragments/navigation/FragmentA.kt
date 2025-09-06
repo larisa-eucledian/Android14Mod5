@@ -28,6 +28,9 @@ class FragmentA : Fragment() {
         binding.btnNext.setOnClickListener {
             parentFragmentManager.beginTransaction().addToBackStack("Fragment A").replace(R.id.fragmentContaier, FragmentB.newInstance()).commit()
         }
+        binding.btnOpenC.setOnClickListener {
+            parentFragmentManager.beginTransaction().addToBackStack("Fragment A").replace(R.id.fragmentContaier, FragmentC.newInstance()).commit()
+        }
     }
 
     companion object {
