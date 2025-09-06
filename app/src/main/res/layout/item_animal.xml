@@ -18,7 +18,6 @@
             android:layout_height="match_parent">
             <ImageView
                 android:id="@+id/ivItem"
-                android:src="@drawable/img_android_verde"
                 android:contentDescription="Imagen del animal"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
@@ -28,7 +27,7 @@
 
             <TextView
                 android:id="@+id/tvItemTitle"
-                android:text="Title"
+                android:text="@string/title_label"
                 android:textAppearance="@style/TextAppearance.App.Headline1"
                 app:layout_constraintStart_toEndOf="@id/ivItem"
                 app:layout_constraintTop_toTopOf="parent"
@@ -39,7 +38,7 @@
 
             <TextView
                 android:id="@+id/tvItemDescription"
-                android:text="Description"
+                android:text="@string/subtitle_label"
                 android:fontFamily="@font/bernier_shade_regular"
                 android:textStyle="normal"
                 android:textSize="16sp"

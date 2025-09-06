@@ -45,10 +45,12 @@ class AnimalAdapter(val list: List<AnimalEntity>) : RecyclerView.Adapter<AnimalA
            tvItemTitle.text = animalEntity.name
            tvItemDescription.text = animalEntity.color
 
-           Picasso.get().load("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRM1-2B5wjpFuyYrSCslCd0do7Do5-wcCwnOQ&usqp=CAU")
-               .placeholder(R.drawable.img_placeholder)
-               .error(R.drawable.ic_delete)
-               .into(ivAnimal)
+          if (animalEntity.image.isNotEmpty()){
+              Picasso.get().load("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRM1-2B5wjpFuyYrSCslCd0do7Do5-wcCwnOQ&usqp=CAU")
+                  .placeholder(R.drawable.img_placeholder)
+                  .error(R.drawable.ic_delete)
+                  .into(ivAnimal)
+          }
 
            cardAnimal.setOnClickListener {
                onRowSelected?.invoke(animalEntity)

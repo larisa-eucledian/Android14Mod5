@@ -30,17 +30,18 @@ class RecyclerViewActivity : AppCompatActivity() {
 
 //COLECCIÓN DE DATOS
         val data = listOf(
-        AnimalEntity("Leon","Amarillo",""),
-        AnimalEntity("Pulpo","Morado",""),
-        AnimalEntity("Tigre","Naranja",""),
-        AnimalEntity("Iguana","Verde",""),
-        AnimalEntity("Xolo","Gris",""),
-        AnimalEntity("Oso","Negro",""), AnimalEntity("Leon","Amarillo",""),
-        AnimalEntity("Pulpo","Morado",""),
-        AnimalEntity("Tigre","Naranja",""),
-        AnimalEntity("Iguana","Verde",""),
-        AnimalEntity("Xolo","Gris",""),
-        AnimalEntity("Oso","Negro",""))
+        AnimalEntity("Leon","Amarillo","https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRM1-2B5wjpFuyYrSCslCd0do7Do5-wcCwnOQ&usqp=CAU"),
+        AnimalEntity("Pulpo","Morado","https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRM1-2B5wjpFuyYrSCslCd0do7Do5-wcCwnOQ&usqp=CAU"),
+        AnimalEntity("Tigre","Naranja","https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRM1-2B5wjpFuyYrSCslCd0do7Do5-wcCwnOQ&usqp=CAU"),
+        AnimalEntity("Iguana","Verde","https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRM1-2B5wjpFuyYrSCslCd0do7Do5-wcCwnOQ&usqp=CAU"),
+        AnimalEntity("Xolo","Gris","https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRM1-2B5wjpFuyYrSCslCd0do7Do5-wcCwnOQ&usqp=CAU"),
+        AnimalEntity("Oso","Negro","https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRM1-2B5wjpFuyYrSCslCd0do7Do5-wcCwnOQ&usqp=CAU"),
+            AnimalEntity("Leon","Amarillo","https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRM1-2B5wjpFuyYrSCslCd0do7Do5-wcCwnOQ&usqp=CAU"),
+        AnimalEntity("Pulpo","Morado","https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRM1-2B5wjpFuyYrSCslCd0do7Do5-wcCwnOQ&usqp=CAU"),
+        AnimalEntity("Tigre","Naranja","https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRM1-2B5wjpFuyYrSCslCd0do7Do5-wcCwnOQ&usqp=CAU"),
+        AnimalEntity("Iguana","Verde","https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRM1-2B5wjpFuyYrSCslCd0do7Do5-wcCwnOQ&usqp=CAU"),
+        AnimalEntity("Xolo","Gris","https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRM1-2B5wjpFuyYrSCslCd0do7Do5-wcCwnOQ&usqp=CAU"),
+        AnimalEntity("Oso","Negro","https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRM1-2B5wjpFuyYrSCslCd0do7Do5-wcCwnOQ&usqp=CAU"))
 
 
         val adapter = AnimalAdapter(data)
