@@ -1,13 +1,16 @@
 package com.example.android14.practicas.graphiccomponents.list
 
+import android.os.Build
 import android.os.Bundle
 import android.view.MenuItem
 import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
+import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.example.android14.R
+
 
 class SecondRecyclerActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -32,6 +35,12 @@ class SecondRecyclerActivity : AppCompatActivity() {
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
+
+        when(item.itemId) {
+            android.R.id.home -> {
+                onBackPressedDispatcher.onBackPressed()
+            }
+        }
         return super.onOptionsItemSelected(item)
     }
 }

@@ -24,7 +24,7 @@ class RecyclerViewActivity : AppCompatActivity() {
         }
 
         supportActionBar?.setDisplayHomeAsUpEnabled(false)
-        supportActionBar?.title = "Primer Activity"
+        supportActionBar?.title = "Lista de Animales"
 
         val list = findViewById<RecyclerView>(R.id.list)
 

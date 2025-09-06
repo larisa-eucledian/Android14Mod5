@@ -2,6 +2,7 @@ package com.example.android14.practicas.explicitintent
 
 import android.content.Intent
 import android.os.Bundle
+import android.view.inputmethod.InputBinding
 import android.widget.Button
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
@@ -10,8 +11,11 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.example.android14.R
+import com.example.android14.databinding.ActivityFirstBinding
 
 class FirstActivity : AppCompatActivity() {
+
+        private lateinit var binding: ActivityFirstBinding
 
     //TOAST Implementation Receive Result
     private val register = registerForActivityResult(ActivityResultContracts.StartActivityForResult()){ result ->
@@ -26,15 +30,21 @@ class FirstActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
-        setContentView(R.layout.activity_first)
+
+        binding = ActivityFirstBinding.inflate(layoutInflater)
+        setContentView(binding.root)
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
+
+        supportActionBar?.setDisplayHomeAsUpEnabled(false)
+        supportActionBar?.title = "Primer Activity"
+
         val btnOpen = findViewById<Button>(R.id.btnOpen)
 
-        btnOpen.setOnClickListener {
+        binding.btnOpen.setOnClickListener {
             val extraBundle = Bundle().apply {
                 putBoolean("EXTRA_IS_MARRIED_KEY", true)
                 putString("EXTRA_SURNAME_KEY","Clemenceau")

@@ -37,6 +37,7 @@ android {
 
     buildFeatures{
         compose = true
+        viewBinding = true
     }
 
     composeOptions {
@@ -57,14 +58,14 @@ dependencies {
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
 
-    implementation("com.squareup.picasso:2.8")
+    implementation(libs.picasso)
 
     // Compose
-    implementation("androidx.compose.ui:ui:1.9.0")
-    implementation("androidx.compose.material3:material3:1.3.0")
-    implementation("androidx.compose.ui:ui-tooling-preview:1.9.0")
-    debugImplementation("androidx.compose.ui:ui-tooling:1.9.0")
+    implementation(libs.androidx.ui)
+    implementation(libs.androidx.material3.v130)
+    implementation(libs.androidx.ui.tooling.preview)
+    debugImplementation(libs.androidx.ui.tooling)
 // Activity + Compose integration
-    implementation("androidx.activity:activity-compose:1.10.1")
+    implementation(libs.androidx.activity.compose)
 
 }

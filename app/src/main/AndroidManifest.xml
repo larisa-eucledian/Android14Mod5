@@ -23,13 +23,7 @@
         <activity
             android:name=".practicas.graphiccomponents.list.RecyclerViewActivity"
             android:theme="@style/Base.Theme.Android14"
-            android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+            android:exported="true"/>
         <activity
             android:name=".practicas.graphiccomponents.BasicComponentsActivity"
             android:exported="true" />
@@ -56,7 +50,13 @@
             android:exported="false" />
         <activity
             android:name=".practicas.explicitintent.FirstActivity"
-            android:exported="true" />
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <activity
             android:name=".practicas.implicitintent.ImplicitIntentActivity"
             android:exported="true" />

@@ -9,6 +9,7 @@ import android.widget.TextView
 import androidx.cardview.widget.CardView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.android14.R
+import com.squareup.picasso.Picasso
 
 class AnimalAdapter(val list: List<AnimalEntity>) : RecyclerView.Adapter<AnimalAdapter.AnimalViewHolder>() {
 
@@ -45,6 +46,9 @@ class AnimalAdapter(val list: List<AnimalEntity>) : RecyclerView.Adapter<AnimalA
            tvItemDescription.text = animalEntity.color
 
            Picasso.get().load("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRM1-2B5wjpFuyYrSCslCd0do7Do5-wcCwnOQ&usqp=CAU")
+               .placeholder(R.drawable.img_placeholder)
+               .error(R.drawable.ic_delete)
+               .into(ivAnimal)
 
            cardAnimal.setOnClickListener {
                onRowSelected?.invoke(animalEntity)

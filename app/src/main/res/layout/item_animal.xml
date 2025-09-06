@@ -18,7 +18,8 @@
             android:layout_height="match_parent">
             <ImageView
                 android:id="@+id/ivItem"
-                android:src=""
+                android:src="@drawable/img_android_verde"
+                android:contentDescription="Imagen del animal"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 android:padding="15dp"
