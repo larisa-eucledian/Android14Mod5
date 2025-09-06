@@ -23,6 +23,9 @@ class RecyclerViewActivity : AppCompatActivity() {
             insets
         }
 
+        supportActionBar?.setDisplayHomeAsUpEnabled(false)
+        supportActionBar?.title = "Primer Activity"
+
         val list = findViewById<RecyclerView>(R.id.list)
 
 //COLECCIÓN DE DATOS

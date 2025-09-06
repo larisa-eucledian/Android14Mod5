@@ -12,6 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Android14">
         <activity
+            android:name=".practicas.compose.ComposeFormsActivity"
+            android:exported="true"/>
+        <activity
             android:name=".practicas.compose.ComposeWelcomeActivity"
             android:exported="true" />
         <activity
@@ -19,6 +22,7 @@
             android:exported="false" />
         <activity
             android:name=".practicas.graphiccomponents.list.RecyclerViewActivity"
+            android:theme="@style/Base.Theme.Android14"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

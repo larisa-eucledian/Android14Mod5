@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="TextAppearance.App.Headline1" parent="TextAppearance.Material3.HeadlineLarge">
+        <item name="android:fontFamily">@font/bernier_shade_regular</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">?colorPrimary</item>
+    </style>
+
+    <style name="TextAppearance.App.Body1" parent="TextAppearance.Material3.BodyLarge">
+        <item name="android:fontFamily">@font/bernier_shade_regular</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">?colorOnBackground</item>
+    </style>
+</resources>

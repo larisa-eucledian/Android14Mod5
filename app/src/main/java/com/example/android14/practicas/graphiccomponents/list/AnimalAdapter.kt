@@ -43,6 +43,9 @@ class AnimalAdapter(val list: List<AnimalEntity>) : RecyclerView.Adapter<AnimalA
        fun render(animalEntity: AnimalEntity, onRowSelected : ((AnimalEntity) -> Unit)?){
            tvItemTitle.text = animalEntity.name
            tvItemDescription.text = animalEntity.color
+
+           Picasso.get().load("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRM1-2B5wjpFuyYrSCslCd0do7Do5-wcCwnOQ&usqp=CAU")
+
            cardAnimal.setOnClickListener {
                onRowSelected?.invoke(animalEntity)
            }

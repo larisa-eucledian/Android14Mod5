@@ -57,6 +57,8 @@ dependencies {
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
 
+    implementation("com.squareup.picasso:2.8")
+
     // Compose
     implementation("androidx.compose.ui:ui:1.9.0")
     implementation("androidx.compose.material3:material3:1.3.0")

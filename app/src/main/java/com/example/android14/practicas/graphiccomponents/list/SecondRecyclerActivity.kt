@@ -1,6 +1,7 @@
 package com.example.android14.practicas.graphiccomponents.list
 
 import android.os.Bundle
+import android.view.MenuItem
 import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
@@ -19,11 +20,18 @@ class SecondRecyclerActivity : AppCompatActivity() {
             insets
         }
 
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
+        supportActionBar?.setDisplayShowTitleEnabled(false)
+
         val animal = intent.getSerializableExtra("extra_animal") as? AnimalEntity
         animal?.let {
             findViewById<TextView>(R.id.tvName).text = it.name
             findViewById<TextView>(R.id.tvDescription).text = it.color
             findViewById<TextView>(R.id.tvImage).text = it.image
         }
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        return super.onOptionsItemSelected(item)
     }
 }

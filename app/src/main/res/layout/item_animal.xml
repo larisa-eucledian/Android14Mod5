@@ -18,7 +18,7 @@
             android:layout_height="match_parent">
             <ImageView
                 android:id="@+id/ivItem"
-                android:src="@mipmap/ic_launcher"
+                android:src=""
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 android:padding="15dp"
@@ -28,7 +28,7 @@
             <TextView
                 android:id="@+id/tvItemTitle"
                 android:text="Title"
-                android:textStyle="bold"
+                android:textAppearance="@style/TextAppearance.App.Headline1"
                 app:layout_constraintStart_toEndOf="@id/ivItem"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -39,11 +39,14 @@
             <TextView
                 android:id="@+id/tvItemDescription"
                 android:text="Description"
+                android:fontFamily="@font/bernier_shade_regular"
                 android:textStyle="normal"
+                android:textSize="16sp"
+                android:textColor="?colorOnSurface"
                 app:layout_constraintStart_toEndOf="@id/ivItem"
                 app:layout_constraintTop_toTopOf="@id/tvItemTitle"
                 app:layout_constraintEnd_toEndOf="parent"
-                android:layout_marginTop="20dp"
+                android:layout_marginTop="30dp"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"/>
 
