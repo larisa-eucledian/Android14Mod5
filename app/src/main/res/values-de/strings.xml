@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Android14 Deutsch</string>
+    <string name="title_label">Titel</string>
+    <string name="subtitle_label">Beschreibung</string>
+    <string name="hello_blank_fragment">Hallo Leer fragment</string>
+    <string name="hello_blank_fragment2">Hallo Leer fragment 2</string>
+</resources>
