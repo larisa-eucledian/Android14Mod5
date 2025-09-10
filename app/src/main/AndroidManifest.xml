@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
-<uses-permission android:name="android.permission.INTERNET"/>
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -12,8 +14,8 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Android14">
         <activity
-            android:name=".practicas.fragments.navigation.FragmentNavigationActivity"
-            android:exported="true" >
+            android:name=".practicas.fragments.bottomnav.BottomNavActivity"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -21,9 +23,11 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".practicas.fragments.FirstFragmentActivity"
+            android:name=".practicas.fragments.navigation.FragmentNavigationActivity"
             android:exported="true"/>
-
+        <activity
+            android:name=".practicas.fragments.FirstFragmentActivity"
+            android:exported="true" />
         <activity
             android:name=".practicas.compose.ComposeFormsActivity"
             android:exported="true" />
@@ -36,8 +40,7 @@
         <activity
             android:name=".practicas.graphiccomponents.list.RecyclerViewActivity"
             android:exported="true"
-            android:theme="@style/Base.Theme.Android14"/>
-
+            android:theme="@style/Base.Theme.Android14" />
         <activity
             android:name=".practicas.graphiccomponents.BasicComponentsActivity"
             android:exported="true" />

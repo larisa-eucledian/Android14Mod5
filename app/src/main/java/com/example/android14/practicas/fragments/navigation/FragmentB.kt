@@ -44,12 +44,12 @@ class FragmentB : Fragment() {
         (activity as AppCompatActivity).supportActionBar?.setDisplayShowTitleEnabled(true)
         (activity as AppCompatActivity).supportActionBar?.setTitle("Fragment B")
 
-        binding.tvInfo.text = "Nombre = $name, Correo = $email"
+        binding.tvInfo.text = "Nombre = $name, Correo = ${email ?: "No hay email"}"
 
         binding.btnNext2.setOnClickListener {
-            parentFragmentManager.beginTransaction().addToBackStack("Fragment B")
-                .replace(R.id.fragmentContaier, FragmentC.newInstance()).commit()
-
+            parentFragmentManager.beginTransaction()
+                .replace(R.id.fragmentContaier, FragmentC.newInstance())
+                .addToBackStack("FragmentC").commit()
         }
     }
 
@@ -71,6 +71,10 @@ class FragmentB : Fragment() {
                 putString("ARG_EMAIL", email)
             }
         }
-
+        fun newInstance(name: String) = FragmentB().apply {
+            arguments = Bundle().apply {
+                putString("ARG_NAME",name)
+            }
+        }
     }
 }

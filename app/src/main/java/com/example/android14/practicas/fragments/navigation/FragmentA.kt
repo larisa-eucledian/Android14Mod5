@@ -30,15 +30,15 @@ class FragmentA : Fragment() {
 
         setHasOptionsMenu(true)
         (activity as AppCompatActivity).supportActionBar?.setDisplayHomeAsUpEnabled(false)
-        (activity as AppCompatActivity).supportActionBar?.setDisplayShowTitleEnabled(false)
-        (activity as AppCompatActivity).supportActionBar?.setTitle("Registrar")
+        (activity as AppCompatActivity).supportActionBar?.setDisplayShowTitleEnabled(true)
+        (activity as AppCompatActivity).supportActionBar?.setTitle("Login")
 
         binding.btnNext.setOnClickListener {
             val name = binding.etName.text.toString()
             val email = binding.etEmail.text.toString()
 
             if (name.isNotEmpty() && email.isNotEmpty()) {
-                parentFragmentManager.beginTransaction().addToBackStack("Fragment A")
+                parentFragmentManager.beginTransaction().addToBackStack("Fragment B")
                     .replace(R.id.fragmentContaier, FragmentB.newInstance(name, email)).commit()
             } else {
                 Toast.makeText(requireContext(), "Ingresa todos los datos", Toast.LENGTH_SHORT)
@@ -47,8 +47,9 @@ class FragmentA : Fragment() {
         }
 
         binding.btnOpenC.setOnClickListener {
-            parentFragmentManager.beginTransaction().addToBackStack("Fragment A")
-                .replace(R.id.fragmentContaier, FragmentC.newInstance()).commit()
+            val name = binding.etName.text.toString()
+            parentFragmentManager.beginTransaction().addToBackStack("")
+                .replace(R.id.fragmentContaier, FragmentB.newInstance(name)).commit()
         }
     }
 
